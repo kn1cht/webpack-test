@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/* CSS Document */
+/* コンテンツ用ページ */
+html{
+  height:100%;
+}
+body {
+  color: #111111;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', Meiryo, メイリオ, 'MS PGothic', arial, helvetica, sans-serif;
+  height:100%;
+}
+
+a {
+  color: #000000;
+}
+/*
+a:link { color: #FFFFFF; }
+a:visited { color: #FFFFFF; }
+a:hover { color: #FFFFFF; }
+a:active { color: #FFFFFF; }
+*/
+
+.header {
+  background-color: #333333;
+}
+
+
+#logo {
+  /*flex-basis: 200px;*/
+  height:60px;
+  margin-bottom:3px;
+  margin-left:10px;
+  margin-top:3px;
+}
+
+#bg_image{
+  /*background-image:url("img/img.jpg");*/
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px; /*320pxで固定（IE/Firefox/Safariでの調整で320pxに固定）*/
+  margin: 0;
+  max-height: 320px;
+  width:100%;
+}
+
+#dept_logo{
+  align-items: center;
+  flex-basis:300px;
+}
+
+.dept_logo_img{
+  /* height: 85%; */
+  margin:30px;
+  margin-bottom:10px;
+  margin-top:10px;
+  max-height: 210px;
+  max-width: 300px;
+}
+
+.content_main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  margin-left: 5vw;
+}
+
+/* スマホ用 */
+.content_element {
+  /*margin: auto;*/
+  margin-right: 6vw;
+  margin-top: 20px;
+  width: 90vw;
+}
+.content_element_full {
+  /*margin: auto;*/
+  margin-top: 20px;
+  width: 90vw;
+}
+
+/* PC用  750px~*/
+@media screen and ( min-width:750px ){
+  .content_element {
+    /*margin: auto;*/
+    margin-right: 6vw;
+    margin-top: 20px;
+    width: 40vw;
+  }
+
+  .content_element_full {
+    /*margin: auto;*/
+    margin-top: 20px;
+    width: 90vw;
+  }
+}
+
+.content_element_title {
+  border-left:5px #666666 solid;
+  padding-left:4px;
+}
+
+.catch {
+  font-family: "a-otf-midashi-go-mb31-pr6n",'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', Meiryo, メイリオ, 'MS PGothic', arial, helvetica, sans-serif;
+  font-size: 180%;
+  font-weight:600;
+  margin-bottom:20px;
+  margin-top:20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/*about, eventページ用設定*/
+.catch2 {
+  color: white;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/*要調整か*/
+.question {
+  font-weight:bold;
+}
+.answer {
+  /*font-family: "a-otf-midashi-go-mb31-pr6n",'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', Meiryo, メイリオ, 'MS PGothic', arial, helvetica, sans-serif;*/
+}
+
+#lyncs_tan {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+#lyncs_tan img {
+  height: 8vh;
+}
+
+/* ハンバーガーメニュー用 */
+.hamburger {
+  color: white;
+}
+
+.hamburger_button {
+  /*ボタンを枠で囲うとクリック率が上がるらしいですよ*/
+  border: solid 1px #ffffff;
+  border-radius: 3px;
+  margin-left: auto;
+  width: 100%;
+}
+
+.hamburger nav {
+  margin-left: auto;
+}
+
+.hamburger a {
+  color: white;
+}
+
+@media screen and (min-width: 769px) {
+  /*大きい画面の場合はボタンを表示せずに，
+  リンクを横並びに表示*/
+  .hamburger_button {
+    display: none;
+  }
+
+  .hamburger nav {
+    display: block;
+  }
+
+  .hamburger ul {
+    /*li要素を横並びに表示する方法は色々ありますが，
+    flexboxを使うのがいい感じだと僕は思います*/
+    flex-direction: row;
+  }
+  .hamburger li {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*画面が小さい場合はボタンを表示し，
+  ボタンクリックでボタンの下にリストを表示させる
+  リストの位置の指定はjsで行っています*/
+  body {
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 3px;
+  }
+
+  .hamburger_button {
+    padding: 1px 5px;
+    text-align: right;
+    width: auto;
+  }
+
+  .hamburger nav {
+    display: none;
+    padding: 0 0;
+    width: 100%;
+  }
+
+  .hamburger ul {
+    flex-direction: column;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .hamburger li {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 10px 10px 3px;
+    text-align: right;
+  }
+
+  .hamburger li:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hamburger li a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  margin: 0 5px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #777;
+  border-radius: .25em;
+}
+
+.label-adv {
+  background-color: #efb727;
+}
+
+.label-ast {
+  background-color: #b03583;
+}
+
+.label-eng {
+  background-color: #1888C0;
+}
+
+.label-sci {
+  background-color: #37b624;
+}
+
+.table-wrapper {
+  overflow-x: scroll;
+  background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.2)) 0 0/20px 100%, linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2)) right/20px 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  margin-bottom: 10px;
+}
+
+table.border-table {
+  width: 100%;
+  border: solid 2px #666;
+  background: linear-gradient(to left, transparent 15px, white 15px) 0 0/50px 100%, linear-gradient(to right, transparent 15px, white 15px) right/50px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  text-align: center;
+  vertical-align: middle;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table.border-table thead , table.border-table tbody {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+table.border-table tr {
+  height:2em;
+}
+
+table.border-table td {
+  border: solid 1px #aaa;
+  color: #222;
+  font-size: 90%;
+}
+
+table.border-table td.description {
+  text-align: left;
+  min-width: 250px;
+  white-space: normal;
+}
+
+table.border-table td.satday {
+  background: lightblue;
+}
+
+
+table.border-table td.sunday {
+  background: lightpink;
+}
+
+.piechart {
+  height: 250px;
+  width: 80%;
+  min-width : 350px;
+}
