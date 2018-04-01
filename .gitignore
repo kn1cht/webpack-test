@@ -1,0 +1,17 @@
+.DS_Store
+*~
+*.swp
+*.zip
+
+# directories
+wiki
+wordpress
+ytp
+gpa
+testfield
+public
+.cache-loader
+
+# node.js
+node_modules
+package-lock.json

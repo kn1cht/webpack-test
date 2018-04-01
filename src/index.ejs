@@ -1,0 +1,26 @@
+<% const rootPath = './'; const title = 'Generated with WebPack!'; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include(`${rootPath}templates/_head`, { rootPath, title }) -%>
+</head>
+
+<body>
+  <div class="flex-column" id="container">
+    <%- include(`${rootPath}templates/_menu`, { rootPath }) -%>
+    
+    <div class="content_main">
+      <div class="content_element_full">
+        <h2 class="content_element_title"><%= title %></h2>
+        <p class="text">
+        ただの人間には興味ありません。この中に、宇宙人、宇宙物理学徒、天文学徒、絶対理想主義者がいたら、あたしのところに来なさい。以上。
+        </p>
+      </div>
+    </div>
+
+    <div id="lyncs_tan">
+        <img src="<%= rootPath %>img/lyncs_tan_footer.png" alt="">
+    </div>
+  </div>
+</body>
+</html>

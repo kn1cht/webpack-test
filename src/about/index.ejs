@@ -1,0 +1,29 @@
+<% const rootPath = '../'; const title = 'About'; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include(`${rootPath}templates/_head`, { rootPath, title }) -%>
+</head>
+
+<body>
+  <div class="flex-column" id="container">
+    <%- include(`${rootPath}templates/_menu`, { rootPath }) -%>
+
+    <div class="content_main">
+      <div class="content_element_full">
+        <h2 class="content_element_title"><%= title %></h2>
+        <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p class="text">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+    <div id="lyncs_tan">
+        <img src="<%= rootPath %>img/lyncs_tan_footer.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
